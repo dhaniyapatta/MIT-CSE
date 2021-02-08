@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class BubbleSortExample {
+class BubbleSort{
   public static void main(String []args) {
     int num, i, j, temp;
     Scanner input = new Scanner(System.in);

@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 
-class GFG { 
+class Prime { 
 
 	static boolean isPrime(int n) 
 	{ 
