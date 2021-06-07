@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>lab8Q8</title>
+</head>
+<style type="text/css">
+#colorBox {
+height: 150px;
+width: 300px;
+}
+</style>
+<body>
+<div>
+<form onclick="changeColor()">
+<input type="radio" id="red" name="color" value="red"> <label for="red">Red</label><br>
+<input type="radio" id="green" name="color" value="green"> <label for="green">Green</label><br>
+<input type="radio" id="blue" name="color" value="blue"> <label for="blue">Blue</label>
+</form>
+</div>
+<div id="colorBox">
+</div>
+<script>
+function changeColor() {
+var box = document.querySelector("#colorBox");
+var inp = document.forms[0];
+var colors = ["red","green","blue"];
+var color ="";
+for(i=0;i<inp.length;i++) 
+{
+	if(inp[i].checked) 
+		{
+			color = colors[i];
+		}
+}
+box.style.backgroundColor = color;
+}
+</script>
+</body>
+</html>
+
+

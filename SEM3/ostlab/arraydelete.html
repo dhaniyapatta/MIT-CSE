@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2>Array:</h2>
+<br>
+<h1 id="Array">Empty Array</h1>
+<input type="button" name="Delete Element" value="Delete Element" onclick="deletearr()">
+</body>
+<script type="text/javascript">
+	var arr=[0,0,0];
+	
+	for(var j=0; j<3; j++) {
+	arr[j] = prompt('Enter Element ' + (j+1));
+	}
+
+	
+
+	function deletearr()
+	{
+		arr.pop();
+	}
+
+	document.getElementById("Array").innerHTML= arr;
+
+
+</script>
+</html>

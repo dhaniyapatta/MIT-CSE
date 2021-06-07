@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#buttons
+		{
+			display: ; 
+			margin-top:100px;
+			margin-left: 20px
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+<form name="form">
+	<input type="text" name="text1"><labe for="text1">Input 1st Number</label><br><br>
+	<input type="text" name="text2"><label for="text2">Input 2nd Number</label><br>
+
+<div id="buttons">
+	<input type="button" style="margin:10px" value="Add" onclick="add();">
+	<input type="button" style="margin:10px" value="Divide" onclick="divide();">
+
+</div>
+
+
+
+</form>
+</body>
+<script type="text/javascript">
+
+	function add()
+	{
+		var v1= document.form.text1.value;
+		var v2= document.form.text2.value;
+		var v3= Number(v1)+Number(v2);
+
+		alert("the sum is: "+v3);
+	}
+	
+</script>
+</html>

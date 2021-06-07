@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#div_container
+		{
+			display: flex;
+			align-items: flex-end;
+		}
+
+	</style>
+	<title>Change</title>
+</head>
+<body>
+	<div id="div_container">
+		<div style="margin:50px" id="day-div">
+		<h1 id="day-text">Day</h1>
+		<br>
+		<br>
+		<input type="button" name="chnage-day" value="Change Day" onclick="changeDay()">
+		</div>
+
+		<div style="margin:50px" id="month-div">
+		<h1 id="month-text">Month</h1>
+		<br> 
+		<br>
+		<input type="button" name="change-month" value="Change Month" onclick="changeMonth()">
+
+		</div>
+
+		<div style="margin:50px" id="year-div">
+		<h1 id="year-text">Year</h1>
+		<br>
+		<br>
+		<input type="button" name="Change Year" value="Change Year" onclick="changYear()">
+		</div>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	var now= new Date();
+	var day= now.getDay();
+	dayarr=["Monday","Tuesday","Wed","Thu","Fri","Saturday", "Sunday"];
+	document.getElementById("day-text").innerHTML = dayarr[day-1];
+	var month=now.getMonth();
+	montharr=["Jan","Feb","Mar","April","May","June", "July","Aug","Sep","Oct","Nov","Dec"];
+	var moni="Feb"
+	document.getElementById("month-text").innerHTML=moni;
+	var year=now.getYear();
+	year=year%100;
+	document.getElementById("year-text").innerHTML=year;
+
+
+
+	function changeDay()
+	{
+		day=(day+1)%7;
+		document.getElementById("day-text").innerHTML = dayarr[day-1];
+	}
+	function changeMonth()
+	{
+		moni=montharr[montharr.indexOf(moni)+1];
+
+		document.getElementById("month-text").innerHTML = moni ;
+	}
+
+	function changYear()
+	{
+		year=year+1;
+		document.getElementById("year-text").innerHTML =year ;
+	}
+</script>
+
+</html>
